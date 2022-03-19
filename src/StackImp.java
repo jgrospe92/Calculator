@@ -45,8 +45,6 @@ public class StackImp <T> {
         if (isFull()){
             throw new Exception("Stack is full");
         }
-
-        //print("Push " + newEntry + " to the Stack");
         elements[++top] = newEntry;
 
     }
@@ -56,8 +54,6 @@ public class StackImp <T> {
         if(isEmpty()){
             throw new Exception("Stack is empty");
         }
-
-        //print("Pop " + peek());
         return elements[top--];
     }
 

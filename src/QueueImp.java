@@ -1,5 +1,3 @@
-import java.io.EOFException;
-
 public class QueueImp<T> {
     
     private T[] elements;
@@ -48,8 +46,6 @@ public class QueueImp<T> {
         if (isEmpty()) throw new Exception("Queue is empty");
 
         T removeEntry = elements[front];
-
-        //print("dequeue " + removeEntry);
         
         front = (front + 1) % capacity;
         count--;
@@ -62,7 +58,6 @@ public class QueueImp<T> {
 
         if(isFull()) throw new Exception("Queue is full");
 
-       // print("enqueue " + newEntry);
 
         rear = ( rear + 1 ) % capacity;
         elements[rear] = newEntry;
@@ -98,17 +93,5 @@ public class QueueImp<T> {
         System.out.println(data);
     }
     
-    public static void main(String[] args) throws Exception {
-        QueueImp q = new QueueImp<>(7);
-        q.enqueue(3);
-        q.enqueue(5);
-        print(q.getFront());
-        q.dequeue();
-        print(q.getFront());
-        q.dequeue();
-        print(q.isEmpty());
-
-        
-    }
     
 }
