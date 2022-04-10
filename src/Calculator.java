@@ -1,7 +1,7 @@
 
 public class Calculator {
 
-    public static int calculate(String data) throws Exception {
+    public int calculate(String data) throws Exception {
         if (data == null || data.length() == 0)
             return 0;
 
@@ -14,7 +14,7 @@ public class Calculator {
         return calculate(queueStack);
     }
 
-    public static int calculate(QueueImp<Character> queueStack) throws Exception {
+    public int calculate(QueueImp<Character> queueStack) throws Exception {
         int num = 0;
 
         StackImp st = new StackImp<>();

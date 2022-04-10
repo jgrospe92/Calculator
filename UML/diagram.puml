@@ -1,0 +1,18 @@
+
+@startuml
+class StackImp{
+  - top: int
+  - DEFAULT_SIZE : int
+  - elements:int[]
+  - capacity: int
+  + StackImp()
+  + isEmpty(): boolean
+  - isFull(): boolean
+  + getSize(): int
+  + clear();
+  + push(T element);
+  + pop(): T
+  + peek(): T
+  + toString(): String
+}
+@enduml

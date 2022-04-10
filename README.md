@@ -58,25 +58,10 @@ output: 21
   - `peek()`
   - `pop()`
 
-```plantuml
-@startuml
-class StackImp{
-  - top: int
-  - DEFAULT_SIZE : int
-  - elements:int[]
-  - capacity: int
-  + StackImp()
-  + isEmpty(): boolean
-  - isFull(): boolean
-  + getSize(): int
-  + clear();
-  + push(T element);
-  + pop(): T
-  + peek(): T
-  + toString(): String
-}
-@enduml
-```
+![class][stackUML]
+
+
+
 ### Properties:
   - **top** is an index that keeps track of the number of the element(s) inside the stack
   - **DEFAULT_SIZE** is a variable for the initial size of the stack if the constructor is called without a parameter.
@@ -102,3 +87,4 @@ class StackImp{
 
 <!-- Link here -->
 [geekforgeek]:https://geeksforgeeks.org/stack-data-structure/
+[stackUML]:https://www.plantuml.com/plantuml/svg/LP3F2i8m38VlVOeUEuOlC2yJt63WhVEYYDGQPh7_MBF35D_ThQCER_c-v1T2oe2Yny5e8hK8WN8KyjaO_oQKRYWwNr1bCSA-gdV7GtlbpQcYgmOD1Yo6OXBdIrHIU24LZcae_wrbMKGLAkDnP5b1Ryvf43RcLAW7hVzjJZj0hbumwxHEJisUPTi8VWWFrgOxadH-3hGB03nNGiUnLxQRpLAH3od1tgSlV040 "stack diagram"
