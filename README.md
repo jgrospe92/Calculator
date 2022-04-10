@@ -81,19 +81,6 @@ output: 21
 # Bug or suggestions :bug:
 - If you a bug or would like to contribute feel free to contact me. 
 
-```mermaid
-classDiagram
-  class Context
-  Context o-- Strategy : uses
-  class StrategyHello{
-    <<abstract>>
-    +execute
-  }
-  StrategyHello <|-- ConcreteStrategy1
-  StrategyHello <|-- ConcreteStrategy2
-
-```
-
 # Reference
 [GeeksForGeeks][geekforgeek]
 
