@@ -5,7 +5,11 @@
   - [Example outcome:](#example-outcome)
   - [Reverse Polish Notation](#reverse-polish-notation)
 - [How to approach this problem?](#how-to-approach-this-problem)
-- [Stack Implementation](#stack-implementation)
+- [Stack Implementation :book:](#stack-implementation-book)
+    - [Properties:](#properties)
+    - [Constructor and Methods](#constructor-and-methods)
+- [Bug or suggestions :bug:](#bug-or-suggestions-bug)
+- [Reference](#reference)
 
 # Calculator
  - A java program that calculates a simple expression **string**. In this project, I learned how to code my own implementation of *Stack* and *Queue* as well as using the *Reverse Polish Notation*. I did not rely on any of the built-in methods from java.utils.
@@ -45,13 +49,56 @@ output: 21
     - [] implement Reverse Polish Notation
 
 ---
-# Stack Implementation
+# Stack Implementation :book:
 
+- Stack is a linear data structure which follows a particular order in which the operation are performed. The order may be LIFO(Last in First Out) or FILO(First in Last Out)
+- We have to make our own implementation of Stack class
+- The main methods for Stack are:
+  - `push()`
+  - `peek()`
+  - `pop()`
 
+```plantuml
+@startuml
+class StackImp{
+  - top: int
+  - DEFAULT_SIZE : int
+  - elements:int[]
+  - capacity: int
+  + StackImp()
+  + isEmpty(): boolean
+  - isFull(): boolean
+  + getSize(): int
+  + clear();
+  + push(T element);
+  + pop(): T
+  + peek(): T
+  + toString(): String
+}
+@enduml
+```
+### Properties:
+  - **top** is an index that keeps track of the number of the element(s) inside the stack
+  - **DEFAULT_SIZE** is a variable for the initial size of the stack if the constructor is called without a parameter.
+  - **element** is an array container for the elements.
+  - **capacity** is determines the actual size of the stack
 
+### Constructor and Methods
+- **StackImp()** the constructor either initialize the stack with a specific size or initialize it with the default value if no argument is given.
+- **isEmpty()** returns a boolean value if top is less than 0;
+- **isFull()** returns a boolean if top is equal to the capacity.
+- **getSize()** return the value of top.
+- **clear()** changes the value of top to -1;
+- **push()** takes an item to be added into the stack. Throws an exception if the stack is full.
+- **pop()** return and remove the last item in the stack. Throws an exception if the stack is empty.
+- **peek()** returns the last item in the stack. It does not remove the item in the stack. Throws an exception if the stack is empty.
+- **toString()** displays a nicely formatted stack.
+# Bug or suggestions :bug:
+- If you a bug or would like to contribute feel free to contact me. 
 
+# Reference
+[GeeksForGeeks][geekforgeek]
 
 
 <!-- Link here -->
-
-
+[geekforgeek]:https://geeksforgeeks.org/stack-data-structure/

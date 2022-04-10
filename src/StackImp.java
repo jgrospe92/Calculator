@@ -26,7 +26,7 @@ public class StackImp <T> {
     public boolean isEmpty(){
         return top == -1 ;
     }
-    // Check if the stac is full
+    // Check if the stack is full
     private boolean isFull(){
         return top == capacity - 1;
     }
@@ -66,11 +66,6 @@ public class StackImp <T> {
         return elements[top];
     }
 
-
-    // print method
-    private static <T> void print(T data){
-        System.out.println(data);
-    }
 
     @Override
     public String toString(){
