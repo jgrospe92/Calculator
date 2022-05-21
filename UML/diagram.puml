@@ -9,10 +9,28 @@ class StackImp{
   + isEmpty(): boolean
   - isFull(): boolean
   + getSize(): int
-  + clear();
-  + push(T element);
+  + clear()
+  + push(T element)
   + pop(): T
   + peek(): T
+  + toString(): String
+}
+
+class QueueImp{
+  - element : int[]
+  - front : int
+  - rear : int
+  - capacity : int
+  - count : int
+  - DEFAULT_SIZE : int
+  + QueueImp()
+  + QueueImp(int size)
+  + getSize() : int
+  + isEmpty() : boolean
+  + isFull() : boolean
+  + dequeue() : int
+  + enqueue() : void
+  + getFront() : int
   + toString(): String
 }
 @enduml

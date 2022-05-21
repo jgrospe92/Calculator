@@ -5,9 +5,12 @@
   - [Example outcome:](#example-outcome)
   - [Reverse Polish Notation](#reverse-polish-notation)
 - [How to approach this problem?](#how-to-approach-this-problem)
-- [Stack Implementation :book:](#stack-implementation-book)
+- [Stack Implementation Using Array](#stack-implementation-using-array)
     - [Properties:](#properties)
     - [Constructor and Methods](#constructor-and-methods)
+- [Queue Implementation Using Array](#queue-implementation-using-array)
+    - [Properties:](#properties-1)
+    - [Constructor and Methods](#constructor-and-methods-1)
 - [Bug or suggestions :bug:](#bug-or-suggestions-bug)
 - [Reference](#reference)
 
@@ -45,12 +48,10 @@ output: 21
 # How to approach this problem?
     - [] Implement Stack
     - [] Implement Queue
-    - [] Tokenize string input
     - [] implement Reverse Polish Notation
 
 ---
-# Stack Implementation :book:
-
+# Stack Implementation Using Array
 - Stack is a linear data structure which follows a particular order in which the operation are performed. The order may be LIFO(Last in First Out) or FILO(First in Last Out)
 - We have to make our own implementation of Stack class
 - The main methods for Stack are:
@@ -59,7 +60,6 @@ output: 21
   - `pop()`
 
 ![class][stackUML]
-
 
 
 ### Properties:
@@ -78,6 +78,33 @@ output: 21
 - **pop()** return and remove the last item in the stack. Throws an exception if the stack is empty.
 - **peek()** returns the last item in the stack. It does not remove the item in the stack. Throws an exception if the stack is empty.
 - **toString()** displays a nicely formatted stack.
+
+# Queue Implementation Using Array
+- Queue is using the FIFO structure or First-In-First-Out. The difference between stacks and queues is in removing. In a stack we remove the item that is most recently added while in queue we remove the item that is added first.
+- The main method are;
+  - enqueue()
+  - dequeue()
+  - getFront()
+
+### Properties:
+  - **element** is an array container for the elements.
+  - **Front** is an index that keeps track of the front element.
+  - **Rear** is an index that keeps track of the rear element.
+  - **capacity** is determines the actual size of the stack
+  - **Count** number of the total elements
+  - **DEFAULT_SIZE** is a variable for the initial size of the
+
+### Constructor and Methods
+- - **QueueImp()** the constructor either initialize the stack with a specific size or initialize it with the default value if no argument is given.
+- **getSize()** returns the size of the element
+- **isEmpty()** returns true if the element is empty.
+- **isFull()** returns true if the element length equal to the capacity.
+- **dequeue()** removes the first element on the queue.
+- **enqueue()** adds new element on the queue.
+- **getFront()** returns the element in front of the queue.
+- **toString()** displays a nicely formatted stack.
+  
+![diagram](https://www.plantuml.com/plantuml/svg/PT1B2i8m40RWVKynonRn0gugs4B1ZLGtYaXinnB8eoOJeOftjmzR6zpb_vAPOH9ROeQS544XcBMmS-Wma_Kh05W22fIe25R05PtElTsC7gNF1fcPnOBLhE3Kp4axhsAJfEl3Td_9isCoyM8Q7KP-RE_1yYSEN27bRGYZMIMtYQofwUsgjK2clfuw8Vwun7lNssk1wcSFpSjnLjfjwxqadPFXgWgZ5Godu1t4gChs4py0 "diagram")
 # Bug or suggestions :bug:
 - If you a bug or would like to contribute feel free to contact me. 
 
